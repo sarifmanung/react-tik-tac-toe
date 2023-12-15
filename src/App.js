@@ -19,12 +19,12 @@ function Board({ xIsNext, squares, onPlay }) {
   if (winner) {
     status = "Winner: " + winner;
   } else {
+    // if not end yet then continue
     status = "Next player: " + (xIsNext ? "X" : "O");
   }
 
   return (
     <React.Fragment>
-      {" "}
       <div className="section-board">
         <div className="container">
           <div className="status"> {status} </div>{" "}
